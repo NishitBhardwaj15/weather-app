@@ -1,7 +1,10 @@
 .main-container{
     border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px black;
     position: relative;
     width: 600px;
     height: auto;
     background-color: white;
+    padding: 0 60px 0 60px;
 }

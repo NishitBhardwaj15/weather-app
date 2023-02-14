@@ -3,7 +3,11 @@
     justify-content: space-evenly;
 }
 
-.weather-deatails{
-    display: grid;
-    grid-template-rows: repeat(3,1fr);
+.weather-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-box img{
+    width: 100%;
 }
