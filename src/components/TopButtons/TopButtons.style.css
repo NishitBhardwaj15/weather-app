@@ -1,0 +1,21 @@
+.city-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 90px 0 90px;
+}
+
+.city-bar button{
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: font-size 1s;
+}
+
+.city-bar button:hover{
+    color: red;
+    font-size: 20px;
+}
+

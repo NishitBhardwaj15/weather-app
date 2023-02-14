@@ -1,0 +1,13 @@
+.time-date-bar{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.time-date-bar h1{
+    padding: 10px 0 30px 0;
+}
+
+.location{
+    font-size: 23px;
+}

@@ -1,0 +1,31 @@
+.search-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.search-bar input{
+    font-size: 16px;
+    padding:5px 35px 5px 0;
+    margin-left: 10px;
+}
+
+.search-bar button{
+    padding:7px 10px 7px 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.search-bar button:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.search-bar span{
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
