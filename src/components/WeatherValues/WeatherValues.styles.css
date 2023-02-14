@@ -3,9 +3,18 @@
     justify-content: space-evenly;
 }
 
+.weather-box h2{
+    font-size: 30px;
+}
+
 .weather-details{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.weather-details span{
+    font-size: 13px;
 }
 
 .weather-box img{

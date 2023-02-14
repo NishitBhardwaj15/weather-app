@@ -5,15 +5,18 @@ import SearchInput from './components/SearchInputs/SearchInput.component'
 import TimeLocation from './components/TimeLocation/TimeLocation.component'
 import WeatherValues from './components/WeatherValues/WeatherValues.component'
 import ExtraDetails from './components/ExtraDetails/ExtraDetails.component'
+import ForeCast from './components/ForeCast/ForeCast.component'
 
-const App=()=>{
-  return(
+const App = () => {
+  
+  return (
     <div className='main-container'>
-      <TopButtons/>
-      <SearchInput/>
-      <TimeLocation/>
-      <WeatherValues/>
-      <ExtraDetails/>
+      <TopButtons />
+      <SearchInput />
+      <TimeLocation />
+      <WeatherValues />
+      <ExtraDetails />
+      <ForeCast />
     </div>
   )
 }

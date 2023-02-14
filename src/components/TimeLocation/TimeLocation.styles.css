@@ -6,8 +6,18 @@
 
 .time-date-bar h1{
     padding: 10px 0 30px 0;
+    font-size: 27px;
 }
 
-.location{
-    font-size: 23px;
+.time-date-bar i{
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.time-date-bar span{
+    font-size: 13px;
+}
+
+.time-date-bar h2{
+    font-size: 20px;
 }

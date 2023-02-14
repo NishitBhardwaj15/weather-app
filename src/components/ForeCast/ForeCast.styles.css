@@ -1,0 +1,25 @@
+.forecast-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.individual-forecast{
+    text-align: center;
+}
+
+.individual-forecast p{
+    font-size: 13px;
+}
+
+.individual-forecast img{
+    width: 75px;
+}
+
+.hr-forecast{
+    padding-left: 30px;
+}
+
+hr{
+    margin-left: 28px;
+}

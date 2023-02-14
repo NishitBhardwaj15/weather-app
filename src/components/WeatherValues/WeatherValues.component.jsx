@@ -7,9 +7,7 @@ const WeatherValues=()=>{
             <div>
                 <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="img"></img>
             </div>
-            <h2>
-                21
-            </h2>
+            <h2>21<sup>&#x2022;</sup></h2>
             <div className="weather-details">
                 <span><i class="fa-solid fa-temperature-low"></i> Feels Like</span>
                 <span><i class="fa-solid fa-droplet"></i> Humidity</span>
