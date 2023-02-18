@@ -1,8 +1,10 @@
+
 import React from "react";
 import './TimeLocation.styles.css'
 
 
 const TimeLocation = () => {
+
     return (
         <div className="time-date-bar">
             <span>Tuesday 14 February 2023</span>

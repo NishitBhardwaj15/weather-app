@@ -1,23 +1,23 @@
 import React from "react";
 import './SearchInput.style.css'
-import getWeather from '../../utils/WeatherData.util'
+import getFomattedData from "../../utils/WeatherData.util"
 
 const SearchInput = () => {
-    console.log("searchinput")
-    const onClickHelper = () => {
-        const city = document.getElementById("cname").value
-        const helperfunction = async () => {
-            const response = await getWeather(city)
-            console.log(response)
-        }
-        helperfunction()
+    const onClickRest=()=>{
+        document.getElementById("cname").value = null
     }
 
+    const onClickSearch=async()=>{
+        const city = document.getElementById("cname").value
+        const dataValues = await getFomattedData(city)
+        console.log(dataValues)
+    }
     return (
         <div className="search-bar">
             <div>
                 <input id="cname" type="text" placeholder="Search your city..." />
-                <button onClick={onClickHelper}><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button onClick={onClickSearch}><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button onClick={onClickRest}><i class="fa-solid fa-broom"></i></button>
             </div>
             <div>
                 <span>&#8451;</span>

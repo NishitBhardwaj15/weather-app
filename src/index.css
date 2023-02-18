@@ -1,12 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto Mono', monospace;
-    background-color:coral;
+    background: rgb(186, 103, 140);
+    background: linear-gradient(90deg, rgba(186, 103, 140, 1) 56%, rgba(80, 132, 194, 1) 94%);
     height: 100vh;
     display: flex;
     align-items: center;
