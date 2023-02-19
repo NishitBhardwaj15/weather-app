@@ -1,8 +1,18 @@
-import axios from 'axios'
+import axios from "axios";
 
 const getWeatherData = (city) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=671a6cf4223f253eac3e9b019796a83e&units=metric`
-  const urldata = axios.get(url)
+  
+  axios.post('/test', {
+    cityname:city
+  })
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+  const urldata = fetch('/api/wdata').then((res)=>res.json()).then((data)=>data)
   return urldata
 }
 
@@ -24,7 +34,7 @@ const currentWeatherFormatter = (currentWeatherData) => {
 
 const getFormattedData = async (searcharg) => {
   const currentWeatherData = await getWeatherData(searcharg)
-  const formattedCurrentWeatherData = currentWeatherFormatter(currentWeatherData.data)
+  const formattedCurrentWeatherData = currentWeatherFormatter(currentWeatherData)
   return formattedCurrentWeatherData
 }
 
