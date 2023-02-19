@@ -1,19 +1,23 @@
 import axios from "axios";
 
-const getWeatherData = (city) => {
-  
-  axios.post('/test', {
-    cityname:city
-  })
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+const GetWeatherData = (city) => {
+  let dataobj = {}
 
-  const urldata = fetch('/api/wdata').then((res)=>res.json()).then((data)=>data)
-  return urldata
+  const fun = async()=>{
+    await axios.post('/test', {
+      cityname:city
+    })
+    .then(function (response) {
+      dataobj = response.data
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    return dataobj
+  }
+  const actualWeatherData = fun()
+  
+  return actualWeatherData
 }
 
 const currentWeatherFormatter = (currentWeatherData) => {
@@ -33,7 +37,7 @@ const currentWeatherFormatter = (currentWeatherData) => {
 }
 
 const getFormattedData = async (searcharg) => {
-  const currentWeatherData = await getWeatherData(searcharg)
+  const currentWeatherData = await GetWeatherData(searcharg)
   const formattedCurrentWeatherData = currentWeatherFormatter(currentWeatherData)
   return formattedCurrentWeatherData
 }
