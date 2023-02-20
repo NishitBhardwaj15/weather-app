@@ -1,10 +1,12 @@
 import React from "react";
 import './SearchInput.style.css'
 import getFomattedData from "../../utils/WeatherData.util"
-import { useState } from "react";
+import { useState,useContext } from "react";
+import {WeatherContext} from "../../context/WeatherContext"
 
 const SearchInput = () => {
     const[currentCity,setCurrentCity] = useState("")
+    const {setCurrentWeather} = useContext(WeatherContext)
 
     const onChangeInput = (event)=>{
         const cityname = event.target.value
@@ -20,6 +22,7 @@ const SearchInput = () => {
         console.log(currentCity)
         const dataValues = await getFomattedData(currentCity)
         console.log(dataValues)
+        setCurrentWeather(dataValues)
     }
 
     return (

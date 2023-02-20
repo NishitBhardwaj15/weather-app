@@ -17,6 +17,10 @@
     font-size: 13px;
 }
 
+.weather-details i{
+    padding-right: 10px;
+}
+
 .weather-box img{
     width: 100%;
 }
