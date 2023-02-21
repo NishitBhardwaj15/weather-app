@@ -11,7 +11,7 @@ const GetWeatherData = (city) => {
       dataobj = response.data
     })
     .catch(function (error) {
-      console.log(error);
+      alert("Bad post request!")
     });
     return dataobj
   }

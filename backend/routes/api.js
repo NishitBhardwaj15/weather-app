@@ -10,7 +10,6 @@ router.use(bodyParser.json())
 
 router.post('/api',(req,res)=>{
     const city = req.body.cityname
-    console.log(city)
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}&units=metric`
     https.get(url,(response)=>{
         response.on("data",(d)=>{

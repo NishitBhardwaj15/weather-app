@@ -15,7 +15,6 @@ const TimeLocation = () => {
             const lat = currentWeather.lat
             const locationTime = DateTime.local().setZone(lon,lat)
             const locationTimeString = locationTime.toFormat("hh:mm:ss")
-            console.log(locationTimeString)
         }
     }
     helper()

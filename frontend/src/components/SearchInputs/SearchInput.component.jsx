@@ -21,7 +21,6 @@ const SearchInput = () => {
     const onClickSearch=async()=>{
         console.log(currentCity)
         const dataValues = await getFormattedData(currentCity)
-        console.log(dataValues)
         setCurrentWeather(dataValues)
     }
 
