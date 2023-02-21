@@ -4,7 +4,7 @@ const GetWeatherData = (city) => {
   let dataobj = {}
 
   const fun = async()=>{
-    await axios.post('/test', {
+    await axios.post('/api', {
       cityname:city
     })
     .then(function (response) {
@@ -36,11 +36,13 @@ const currentWeatherFormatter = (currentWeatherData) => {
   return {lon,lat,feels_like,humidity,temp,temp_max,temp_min,dt,name,country,sunrise,sunset,main,icon,speed}
 }
 
-const getFormattedData = async (searcharg) => {
+export const getFormattedData = async (searcharg) => {
   const currentWeatherData = await GetWeatherData(searcharg)
   const formattedCurrentWeatherData = currentWeatherFormatter(currentWeatherData)
   return formattedCurrentWeatherData
 }
 
-export default getFormattedData
+export const getIcon=(icode)=>{
+  return `http://openweathermap.org/img/wn/${icode}.png`
+}
 

@@ -1,6 +1,6 @@
 import React from "react";
 import './SearchInput.style.css'
-import getFomattedData from "../../utils/WeatherData.util"
+import { getFormattedData } from "../../utils/WeatherData.util";
 import { useState,useContext } from "react";
 import {WeatherContext} from "../../context/WeatherContext"
 
@@ -13,14 +13,14 @@ const SearchInput = () => {
         setCurrentCity(cityname)
     }
 
-    const onClickRest=()=>{
+    const onClickReset=()=>{
         document.getElementById("cname").value = ""
         setCurrentCity()
     }
 
     const onClickSearch=async()=>{
         console.log(currentCity)
-        const dataValues = await getFomattedData(currentCity)
+        const dataValues = await getFormattedData(currentCity)
         console.log(dataValues)
         setCurrentWeather(dataValues)
     }
@@ -30,7 +30,7 @@ const SearchInput = () => {
             <div>
                 <input onChange={onChangeInput} name="cname" id="cname" type="text" placeholder="Search your city..." />
                 <button onClick={onClickSearch}><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button onClick={onClickRest}><i class="fa-solid fa-broom"></i></button>
+                <button onClick={onClickReset}><i class="fa-solid fa-broom"></i></button>
             </div>
             <div>
                 <span>&#8451;</span>
